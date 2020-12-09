@@ -6,7 +6,7 @@ import json
 
 data = {}
 
-with open('trace.json') as json_file:
+with open('shortertrace.json') as json_file:
     data = json.load(json_file)
 
 context = {
@@ -32,28 +32,26 @@ context = {
         "@id": "ex:authorAssociation",
         "@type": "xsd:string"
     },
-    "html_url": {
-        "@id": "s:url",
-        "@type": "xsd:anyURI"
-    },
     "closed_at": {
         "@id": "s:endDate",
         "@type": "xsd:dateTimeStamp"
     },
-    "user": {
+    "creator": {
         "@id": "s:creator",
         "@type": "ex:User",
+    },
+    "user": {
+        "@id": "s:url",
+        "@type": "ex:User",
+
     },
     "assignees": {
          "@id": "s:assignee",
          "@type": "ex:User"
     },
-    "repository_url": {
-        "@type": "@id",
-        "@reverse": "ex:issue"
-    },
-    "labels" : {
-        "@id" : "ex:label",
+    "issue": {
+         "@id": "s:url",
+         "@type": "ex:issue"
     },
     "name": {
         "@id": "s:name",
@@ -67,10 +65,31 @@ context = {
         "@type": "@id",
         "@reverse": "ex:comment"
     },
+    "html_url": {
+        "@id": "s:url",
+        "@type": "xsd:anyURI"
+    },
+    "login": {
+        "@id": "s:accountId",
+        "@type": "xsd:string"
+    },
+    "repo_url": {
+        "@type": "@id",
+        "@reverse": "ex:issue"
+    },
     "created_at": {
         "@id": "s:startDate",
         "@type": "xsd:dateTimeStamp"
     },
+    "labels": {
+        "@id": "s:name",
+        "@type": "ex:label"
+    },
+    "comments_url": {
+        "@id": "ex:comment",
+        "@type": "s:url"
+    },
+
     "state": "@type",
     "open": "ex:OpenIssue",
     "closed": "ex:ClosedIssue"
@@ -86,6 +105,6 @@ expanded = jsonld.expand(data, {'expandContext': context})
 normalized = jsonld.normalize(expanded, {'algorithm': 'URDNA2015', 'format': 'application/n-quads'})
 #print(normalized)
 
-f = open("machin.nq", "a")
+f = open("machine.nq", "a")
 f.write(normalized)
 f.close()

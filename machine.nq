@@ -1,0 +1,12 @@
+<https://api.github.com/repos/pchampin/sophia_rs/issues/97> <http://example.com/ns#authorAssociation> "NONE" .
+<https://api.github.com/repos/pchampin/sophia_rs/issues/97> <http://example.com/ns#comment> "https://api.github.com/repos/pchampin/sophia_rs/issues/97/comments"^^<http://schema.org/url> .
+<https://api.github.com/repos/pchampin/sophia_rs/issues/97> <http://schema.org/description> "Hi!\r\n\r\nThank you for this library!\r\n\r\nI am working on a graphQL -> sparQL translator in Rust (https://github.com/007vasy/warpgrapher?organization=007vasy&organization=007vasy) and I having a hard time figuring out how to use sophia to connect to a database and execute the queries againts it. Could you give some pointers?" .
+<https://api.github.com/repos/pchampin/sophia_rs/issues/97> <http://schema.org/identifier> "753882518"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://api.github.com/repos/pchampin/sophia_rs/issues/97> <http://schema.org/name> "Use sophia to connect to a SparQL db (in my case AnzoGraph)" .
+<https://api.github.com/repos/pchampin/sophia_rs/issues/97> <http://schema.org/startDate> "2020-11-30T23:38:16Z"^^<http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<https://api.github.com/repos/pchampin/sophia_rs/issues/97> <http://schema.org/url> "https://github.com/pchampin/sophia_rs/issues/97"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://api.github.com/repos/pchampin/sophia_rs/issues/97> <http://schema.org/url> <https://api.github.com/users/007vasy> .
+<https://api.github.com/repos/pchampin/sophia_rs/issues/97> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.com/ns#OpenIssue> .
+<https://api.github.com/users/007vasy> <http://schema.org/accountId> "007vasy" .
+<https://api.github.com/users/007vasy> <http://schema.org/identifier> "12837887"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://api.github.com/users/007vasy> <http://schema.org/url> "https://github.com/007vasy"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
